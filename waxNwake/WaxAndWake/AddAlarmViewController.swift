@@ -8,10 +8,14 @@
 
 import UIKit
 
+protocol CanReceive {
+    func receiveData(data: [String: Int])
+}
+
 class AddAlarmViewController: UIViewController {
     var timeValuePassedOver: String?
+    var delegete: CanReceive?
     
-    @IBOutlet weak var timeOfDAy: UISegmentedControl!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var timeOfDay: UISegmentedControl!
     @IBOutlet weak var dayOfWeek: UISegmentedControl!
@@ -27,7 +31,6 @@ class AddAlarmViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -38,6 +41,8 @@ class AddAlarmViewController: UIViewController {
     }
     */
     @IBAction func addAlarmButtonPressed(_ sender: UIButton) {
+        delegete?.receiveData(data: ["timeOfDay": timeOfDay.selectedSegmentIndex, "dayOfWeek" : dayOfWeek.selectedSegmentIndex])
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIButton) {

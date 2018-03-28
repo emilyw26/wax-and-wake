@@ -11,10 +11,12 @@ import SpriteKit
 import UIKit
 
 @objcMembers
-class GameScene: SKScene {
-    
+class GameScene: SKScene, GameDelegate {
     let player = SKSpriteNode(imageNamed: "ball")
     let button = SKSpriteNode(imageNamed: "add")
+    let background = SKSpriteNode(imageNamed: "sunMoon")
+    var alarms = [SKSpriteNode]()
+    
     let timeLabel = SKLabelNode(text: "12:00")
     
     var touchingPlayer = false
@@ -23,7 +25,6 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         // this method is called when your game scene is ready to run
-        let background = SKSpriteNode(imageNamed: "sunMoon")
         background.size.width = frame.size.width/3
         background.size.height = background.size.width
         background.zPosition = -1
@@ -98,6 +99,18 @@ class GameScene: SKScene {
         let minutes: Int = Int((decimalValue * 60).truncatingRemainder(dividingBy: 60))
     
         return "\(hours):\(minutes < 10 ? "0\(minutes)" : "\(minutes)")"
+    }
+    
+    func addAlarm() {
+        let alarm = SKSpriteNode(imageNamed: "ball")
+        alarm.size.width = background.size.height/10
+        alarm.size.height = background.size.height/10
+        alarm.zPosition = 2
+        alarm.position = player.position
+        addChild(alarm)
+        
+        player.position = CGPoint(x: frame.midX, y: background.size.height/2)
+        alarms.append(alarm)
     }
     
 }
