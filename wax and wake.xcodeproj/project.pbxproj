@@ -7,64 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		96F47245206A87ED00096E7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F47244206A87ED00096E7E /* AppDelegate.swift */; };
-		96F47247206A87ED00096E7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F47246206A87ED00096E7E /* ViewController.swift */; };
-		96F4724A206A87ED00096E7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F47248206A87ED00096E7E /* Main.storyboard */; };
-		96F4724C206A87ED00096E7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F4724B206A87ED00096E7E /* Assets.xcassets */; };
-		96F4724F206A87ED00096E7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F4724D206A87ED00096E7E /* LaunchScreen.storyboard */; };
-		96F4725A206A87ED00096E7E /* wax_and_wakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F47259206A87ED00096E7E /* wax_and_wakeTests.swift */; };
-		96F47265206A87ED00096E7E /* wax_and_wakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F47264206A87ED00096E7E /* wax_and_wakeUITests.swift */; };
+		F974FCAD206A7F65005038B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F974FCAC206A7F65005038B4 /* AppDelegate.swift */; };
+		F974FCAF206A7F65005038B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F974FCAE206A7F65005038B4 /* ViewController.swift */; };
+		F974FCB2206A7F65005038B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F974FCB0206A7F65005038B4 /* Main.storyboard */; };
+		F974FCB4206A7F65005038B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F974FCB3206A7F65005038B4 /* Assets.xcassets */; };
+		F974FCB7206A7F65005038B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F974FCB5206A7F65005038B4 /* LaunchScreen.storyboard */; };
+		F974FCC2206A7F65005038B4 /* wax_and_wakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F974FCC1206A7F65005038B4 /* wax_and_wakeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		96F47256206A87ED00096E7E /* PBXContainerItemProxy */ = {
+		F974FCBE206A7F65005038B4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 96F47239206A87EC00096E7E /* Project object */;
+			containerPortal = F974FCA1206A7F64005038B4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 96F47240206A87ED00096E7E;
-			remoteInfo = "wax and wake";
-		};
-		96F47261206A87ED00096E7E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 96F47239206A87EC00096E7E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 96F47240206A87ED00096E7E;
+			remoteGlobalIDString = F974FCA8206A7F65005038B4;
 			remoteInfo = "wax and wake";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		96F47241206A87ED00096E7E /* wax and wake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wax and wake.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		96F47244206A87ED00096E7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		96F47246206A87ED00096E7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		96F47249206A87ED00096E7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		96F4724B206A87ED00096E7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		96F4724E206A87ED00096E7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		96F47250206A87ED00096E7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96F47255206A87ED00096E7E /* wax and wakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wax and wakeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		96F47259206A87ED00096E7E /* wax_and_wakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wax_and_wakeTests.swift; sourceTree = "<group>"; };
-		96F4725B206A87ED00096E7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96F47260206A87ED00096E7E /* wax and wakeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wax and wakeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		96F47264206A87ED00096E7E /* wax_and_wakeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wax_and_wakeUITests.swift; sourceTree = "<group>"; };
-		96F47266206A87ED00096E7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F974FCA9206A7F65005038B4 /* wax and wake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wax and wake.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F974FCAC206A7F65005038B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F974FCAE206A7F65005038B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F974FCB1206A7F65005038B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F974FCB3206A7F65005038B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F974FCB6206A7F65005038B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F974FCB8206A7F65005038B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F974FCBD206A7F65005038B4 /* wax and wakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wax and wakeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F974FCC1206A7F65005038B4 /* wax_and_wakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wax_and_wakeTests.swift; sourceTree = "<group>"; };
+		F974FCC3206A7F65005038B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		96F4723E206A87ED00096E7E /* Frameworks */ = {
+		F974FCA6206A7F65005038B4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96F47252206A87ED00096E7E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		96F4725D206A87ED00096E7E /* Frameworks */ = {
+		F974FCBA206A7F65005038B4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,67 +56,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		96F47238206A87EC00096E7E = {
+		F974FCA0206A7F64005038B4 = {
 			isa = PBXGroup;
 			children = (
-				96F47243206A87ED00096E7E /* wax and wake */,
-				96F47258206A87ED00096E7E /* wax and wakeTests */,
-				96F47263206A87ED00096E7E /* wax and wakeUITests */,
-				96F47242206A87ED00096E7E /* Products */,
+				F974FCAB206A7F65005038B4 /* wax and wake */,
+				F974FCC0206A7F65005038B4 /* wax and wakeTests */,
+				F974FCAA206A7F65005038B4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		96F47242206A87ED00096E7E /* Products */ = {
+		F974FCAA206A7F65005038B4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				96F47241206A87ED00096E7E /* wax and wake.app */,
-				96F47255206A87ED00096E7E /* wax and wakeTests.xctest */,
-				96F47260206A87ED00096E7E /* wax and wakeUITests.xctest */,
+				F974FCA9206A7F65005038B4 /* wax and wake.app */,
+				F974FCBD206A7F65005038B4 /* wax and wakeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		96F47243206A87ED00096E7E /* wax and wake */ = {
+		F974FCAB206A7F65005038B4 /* wax and wake */ = {
 			isa = PBXGroup;
 			children = (
-				96F47244206A87ED00096E7E /* AppDelegate.swift */,
-				96F47246206A87ED00096E7E /* ViewController.swift */,
-				96F47248206A87ED00096E7E /* Main.storyboard */,
-				96F4724B206A87ED00096E7E /* Assets.xcassets */,
-				96F4724D206A87ED00096E7E /* LaunchScreen.storyboard */,
-				96F47250206A87ED00096E7E /* Info.plist */,
+				F974FCAC206A7F65005038B4 /* AppDelegate.swift */,
+				F974FCAE206A7F65005038B4 /* ViewController.swift */,
+				F974FCB0206A7F65005038B4 /* Main.storyboard */,
+				F974FCB3206A7F65005038B4 /* Assets.xcassets */,
+				F974FCB5206A7F65005038B4 /* LaunchScreen.storyboard */,
+				F974FCB8206A7F65005038B4 /* Info.plist */,
 			);
 			path = "wax and wake";
 			sourceTree = "<group>";
 		};
-		96F47258206A87ED00096E7E /* wax and wakeTests */ = {
+		F974FCC0206A7F65005038B4 /* wax and wakeTests */ = {
 			isa = PBXGroup;
 			children = (
-				96F47259206A87ED00096E7E /* wax_and_wakeTests.swift */,
-				96F4725B206A87ED00096E7E /* Info.plist */,
+				F974FCC1206A7F65005038B4 /* wax_and_wakeTests.swift */,
+				F974FCC3206A7F65005038B4 /* Info.plist */,
 			);
 			path = "wax and wakeTests";
-			sourceTree = "<group>";
-		};
-		96F47263206A87ED00096E7E /* wax and wakeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				96F47264206A87ED00096E7E /* wax_and_wakeUITests.swift */,
-				96F47266206A87ED00096E7E /* Info.plist */,
-			);
-			path = "wax and wakeUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		96F47240206A87ED00096E7E /* wax and wake */ = {
+		F974FCA8206A7F65005038B4 /* wax and wake */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96F47269206A87ED00096E7E /* Build configuration list for PBXNativeTarget "wax and wake" */;
+			buildConfigurationList = F974FCC6206A7F65005038B4 /* Build configuration list for PBXNativeTarget "wax and wake" */;
 			buildPhases = (
-				96F4723D206A87ED00096E7E /* Sources */,
-				96F4723E206A87ED00096E7E /* Frameworks */,
-				96F4723F206A87ED00096E7E /* Resources */,
+				F974FCA5206A7F65005038B4 /* Sources */,
+				F974FCA6206A7F65005038B4 /* Frameworks */,
+				F974FCA7206A7F65005038B4 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -142,72 +113,49 @@
 			);
 			name = "wax and wake";
 			productName = "wax and wake";
-			productReference = 96F47241206A87ED00096E7E /* wax and wake.app */;
+			productReference = F974FCA9206A7F65005038B4 /* wax and wake.app */;
 			productType = "com.apple.product-type.application";
 		};
-		96F47254206A87ED00096E7E /* wax and wakeTests */ = {
+		F974FCBC206A7F65005038B4 /* wax and wakeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96F4726C206A87ED00096E7E /* Build configuration list for PBXNativeTarget "wax and wakeTests" */;
+			buildConfigurationList = F974FCC9206A7F65005038B4 /* Build configuration list for PBXNativeTarget "wax and wakeTests" */;
 			buildPhases = (
-				96F47251206A87ED00096E7E /* Sources */,
-				96F47252206A87ED00096E7E /* Frameworks */,
-				96F47253206A87ED00096E7E /* Resources */,
+				F974FCB9206A7F65005038B4 /* Sources */,
+				F974FCBA206A7F65005038B4 /* Frameworks */,
+				F974FCBB206A7F65005038B4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				96F47257206A87ED00096E7E /* PBXTargetDependency */,
+				F974FCBF206A7F65005038B4 /* PBXTargetDependency */,
 			);
 			name = "wax and wakeTests";
 			productName = "wax and wakeTests";
-			productReference = 96F47255206A87ED00096E7E /* wax and wakeTests.xctest */;
+			productReference = F974FCBD206A7F65005038B4 /* wax and wakeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		96F4725F206A87ED00096E7E /* wax and wakeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 96F4726F206A87ED00096E7E /* Build configuration list for PBXNativeTarget "wax and wakeUITests" */;
-			buildPhases = (
-				96F4725C206A87ED00096E7E /* Sources */,
-				96F4725D206A87ED00096E7E /* Frameworks */,
-				96F4725E206A87ED00096E7E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				96F47262206A87ED00096E7E /* PBXTargetDependency */,
-			);
-			name = "wax and wakeUITests";
-			productName = "wax and wakeUITests";
-			productReference = 96F47260206A87ED00096E7E /* wax and wakeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		96F47239206A87EC00096E7E /* Project object */ = {
+		F974FCA1206A7F64005038B4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
-				ORGANIZATIONNAME = ramen;
+				ORGANIZATIONNAME = "MR Ngo";
 				TargetAttributes = {
-					96F47240206A87ED00096E7E = {
+					F974FCA8206A7F65005038B4 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
-					96F47254206A87ED00096E7E = {
+					F974FCBC206A7F65005038B4 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 96F47240206A87ED00096E7E;
-					};
-					96F4725F206A87ED00096E7E = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 96F47240206A87ED00096E7E;
+						TestTargetID = F974FCA8206A7F65005038B4;
 					};
 				};
 			};
-			buildConfigurationList = 96F4723C206A87EC00096E7E /* Build configuration list for PBXProject "wax and wake" */;
+			buildConfigurationList = F974FCA4206A7F64005038B4 /* Build configuration list for PBXProject "wax and wake" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -215,37 +163,29 @@
 				en,
 				Base,
 			);
-			mainGroup = 96F47238206A87EC00096E7E;
-			productRefGroup = 96F47242206A87ED00096E7E /* Products */;
+			mainGroup = F974FCA0206A7F64005038B4;
+			productRefGroup = F974FCAA206A7F65005038B4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				96F47240206A87ED00096E7E /* wax and wake */,
-				96F47254206A87ED00096E7E /* wax and wakeTests */,
-				96F4725F206A87ED00096E7E /* wax and wakeUITests */,
+				F974FCA8206A7F65005038B4 /* wax and wake */,
+				F974FCBC206A7F65005038B4 /* wax and wakeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		96F4723F206A87ED00096E7E /* Resources */ = {
+		F974FCA7206A7F65005038B4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96F4724F206A87ED00096E7E /* LaunchScreen.storyboard in Resources */,
-				96F4724C206A87ED00096E7E /* Assets.xcassets in Resources */,
-				96F4724A206A87ED00096E7E /* Main.storyboard in Resources */,
+				F974FCB7206A7F65005038B4 /* LaunchScreen.storyboard in Resources */,
+				F974FCB4206A7F65005038B4 /* Assets.xcassets in Resources */,
+				F974FCB2206A7F65005038B4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96F47253206A87ED00096E7E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		96F4725E206A87ED00096E7E /* Resources */ = {
+		F974FCBB206A7F65005038B4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -255,59 +195,46 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		96F4723D206A87ED00096E7E /* Sources */ = {
+		F974FCA5206A7F65005038B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96F47247206A87ED00096E7E /* ViewController.swift in Sources */,
-				96F47245206A87ED00096E7E /* AppDelegate.swift in Sources */,
+				F974FCAF206A7F65005038B4 /* ViewController.swift in Sources */,
+				F974FCAD206A7F65005038B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96F47251206A87ED00096E7E /* Sources */ = {
+		F974FCB9206A7F65005038B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96F4725A206A87ED00096E7E /* wax_and_wakeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		96F4725C206A87ED00096E7E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				96F47265206A87ED00096E7E /* wax_and_wakeUITests.swift in Sources */,
+				F974FCC2206A7F65005038B4 /* wax_and_wakeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		96F47257206A87ED00096E7E /* PBXTargetDependency */ = {
+		F974FCBF206A7F65005038B4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 96F47240206A87ED00096E7E /* wax and wake */;
-			targetProxy = 96F47256206A87ED00096E7E /* PBXContainerItemProxy */;
-		};
-		96F47262206A87ED00096E7E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 96F47240206A87ED00096E7E /* wax and wake */;
-			targetProxy = 96F47261206A87ED00096E7E /* PBXContainerItemProxy */;
+			target = F974FCA8206A7F65005038B4 /* wax and wake */;
+			targetProxy = F974FCBE206A7F65005038B4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		96F47248206A87ED00096E7E /* Main.storyboard */ = {
+		F974FCB0206A7F65005038B4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				96F47249206A87ED00096E7E /* Base */,
+				F974FCB1206A7F65005038B4 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		96F4724D206A87ED00096E7E /* LaunchScreen.storyboard */ = {
+		F974FCB5206A7F65005038B4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				96F4724E206A87ED00096E7E /* Base */,
+				F974FCB6206A7F65005038B4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -315,7 +242,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		96F47267206A87ED00096E7E /* Debug */ = {
+		F974FCC4206A7F65005038B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -372,7 +299,7 @@
 			};
 			name = Debug;
 		};
-		96F47268206A87ED00096E7E /* Release */ = {
+		F974FCC5206A7F65005038B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -422,43 +349,46 @@
 			};
 			name = Release;
 		};
-		96F4726A206A87ED00096E7E /* Debug */ = {
+		F974FCC7206A7F65005038B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AGM8UTU65R;
 				INFOPLIST_FILE = "wax and wake/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ramen.wax-and-wake";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.na59.wax-and-wake";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		96F4726B206A87ED00096E7E /* Release */ = {
+		F974FCC8206A7F65005038B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AGM8UTU65R;
 				INFOPLIST_FILE = "wax and wake/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ramen.wax-and-wake";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.na59.wax-and-wake";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		96F4726D206A87ED00096E7E /* Debug */ = {
+		F974FCCA206A7F65005038B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AGM8UTU65R;
 				INFOPLIST_FILE = "wax and wakeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ramen.wax-and-wakeTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.na59.wax-and-wakeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -466,92 +396,54 @@
 			};
 			name = Debug;
 		};
-		96F4726E206A87ED00096E7E /* Release */ = {
+		F974FCCB206A7F65005038B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AGM8UTU65R;
 				INFOPLIST_FILE = "wax and wakeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ramen.wax-and-wakeTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.na59.wax-and-wakeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wax and wake.app/wax and wake";
-			};
-			name = Release;
-		};
-		96F47270206A87ED00096E7E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "wax and wakeUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ramen.wax-and-wakeUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "wax and wake";
-			};
-			name = Debug;
-		};
-		96F47271206A87ED00096E7E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "wax and wakeUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ramen.wax-and-wakeUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "wax and wake";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		96F4723C206A87EC00096E7E /* Build configuration list for PBXProject "wax and wake" */ = {
+		F974FCA4206A7F64005038B4 /* Build configuration list for PBXProject "wax and wake" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				96F47267206A87ED00096E7E /* Debug */,
-				96F47268206A87ED00096E7E /* Release */,
+				F974FCC4206A7F65005038B4 /* Debug */,
+				F974FCC5206A7F65005038B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96F47269206A87ED00096E7E /* Build configuration list for PBXNativeTarget "wax and wake" */ = {
+		F974FCC6206A7F65005038B4 /* Build configuration list for PBXNativeTarget "wax and wake" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				96F4726A206A87ED00096E7E /* Debug */,
-				96F4726B206A87ED00096E7E /* Release */,
+				F974FCC7206A7F65005038B4 /* Debug */,
+				F974FCC8206A7F65005038B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96F4726C206A87ED00096E7E /* Build configuration list for PBXNativeTarget "wax and wakeTests" */ = {
+		F974FCC9206A7F65005038B4 /* Build configuration list for PBXNativeTarget "wax and wakeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				96F4726D206A87ED00096E7E /* Debug */,
-				96F4726E206A87ED00096E7E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		96F4726F206A87ED00096E7E /* Build configuration list for PBXNativeTarget "wax and wakeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				96F47270206A87ED00096E7E /* Debug */,
-				96F47271206A87ED00096E7E /* Release */,
+				F974FCCA206A7F65005038B4 /* Debug */,
+				F974FCCB206A7F65005038B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 96F47239206A87EC00096E7E /* Project object */;
+	rootObject = F974FCA1206A7F64005038B4 /* Project object */;
 }

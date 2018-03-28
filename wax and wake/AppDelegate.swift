@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  wax and wake
 //
-//  Created by Emily Wu on 3/27/18.
-//  Copyright © 2018 ramen. All rights reserved.
+//  Created by Mary Ruth (MR) Ngo on 3/27/18.
+//  Copyright © 2018 MR Ngo. All rights reserved.
 //
 
 import UIKit
