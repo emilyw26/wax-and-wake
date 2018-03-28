@@ -104,7 +104,9 @@
                         <viewLayoutGuide key="safeArea" id="iw6-HN-ovv"/>
                     </view>
                     <connections>
+                        <outlet property="dayOfWeek" destination="3ln-aY-gg2" id="AKd-t7-JA2"/>
                         <outlet property="time" destination="bTf-nF-A7Z" id="q6c-Fp-L0u"/>
+                        <outlet property="timeOfDay" destination="drL-Cj-aeV" id="GCc-Oz-XCu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wn4-bE-txj" userLabel="First Responder" sceneMemberID="firstResponder"/>

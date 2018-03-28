@@ -11,7 +11,10 @@ import UIKit
 class AddAlarmViewController: UIViewController {
     var timeValuePassedOver: String?
     
+    @IBOutlet weak var timeOfDAy: UISegmentedControl!
     @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var timeOfDay: UISegmentedControl!
+    @IBOutlet weak var dayOfWeek: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
