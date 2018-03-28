@@ -10,13 +10,16 @@ import UIKit
 
 class AddAlarmViewController: UIViewController {
     var timeValuePassedOver: String?
-    
     @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var amPm: UISegmentedControl!
+    @IBOutlet weak var label: UITextField!
+    @IBOutlet weak var daysOfWeek: UISegmentedControl!
+    @IBOutlet weak var vibes: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         time.text = timeValuePassedOver
-        // Do any additional setup after loading the view.
+        time.adjustsFontSizeToFitWidth = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,7 +27,7 @@ class AddAlarmViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
 
