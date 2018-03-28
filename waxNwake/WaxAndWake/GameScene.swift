@@ -68,7 +68,6 @@ class GameScene: SKScene {
                 
                 let radians = atan2(location.y, location.x) + CGFloat.pi
                 let degrees = radians * (180 / CGFloat.pi) + 180
-                print(degrees)
                 
                 player.position.x = radius * cos(radians)
                 player.position.y = radius * sin(radians)
