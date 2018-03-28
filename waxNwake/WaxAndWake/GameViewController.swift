@@ -9,7 +9,6 @@
 import UIKit
 import SpriteKit
 import GameplayKit
-import ActionSheetPicker_3_0
 
 class GameViewController: UIViewController {
     var timeNode: SKNode?
