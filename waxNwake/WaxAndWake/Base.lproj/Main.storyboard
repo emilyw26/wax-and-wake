@@ -88,6 +88,7 @@
                                 <state key="normal" title="Add Alarm"/>
                                 <connections>
                                     <action selector="addAlarmButtonPressed:" destination="Ow9-iB-EIY" eventType="touchUpInside" id="xfH-fk-hnh"/>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="MWq-ZU-yf8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gw4-6E-2D3">
