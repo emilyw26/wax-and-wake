@@ -22,7 +22,7 @@ class GameScene: SKScene, GameDelegate {
     let timeLabel = SKLabelNode(text: "12:00")
     
     var touchingPlayer = false
-    var touchingAlarm = false
+    var alarmBeingTouched: SKSpriteNode?
     
     var radius = CGFloat(100)
     var scaleFactor = CGFloat(1.3)
@@ -67,6 +67,7 @@ class GameScene: SKScene, GameDelegate {
                 for i in 0 ... alarms.count-1 {
                     if tappedNodes.contains(alarms[i]) {
                         viewController.viewTouchedAlarm(alarmIndex: i)
+                        alarmBeingTouched = alarms[i]
                     }
                 }
             }
@@ -91,7 +92,7 @@ class GameScene: SKScene, GameDelegate {
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         touchingPlayer = false
-        touchingAlarm = false
+        alarmBeingTouched = nil
     }
     
 
@@ -123,6 +124,11 @@ class GameScene: SKScene, GameDelegate {
         player.position = CGPoint(x: frame.midX, y: background.size.height/2)
         alarms.append(alarm)
     }
+    
+    func deleteAlarm() {
+        alarmBeingTouched?.removeFromParent()
+    }
+
     
     func setController(controller: GameViewController!) {
         viewController = controller

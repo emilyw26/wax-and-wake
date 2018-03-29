@@ -12,6 +12,7 @@ import GameplayKit
 
 protocol GameDelegate {
     func addAlarm()
+    func deleteAlarm()
 }
 
 class Alarm {
@@ -104,30 +105,36 @@ class GameViewController: UIViewController, CanReceive {
     
     func viewTouchedAlarm(alarmIndex: Int) {
         presetAlarmIndex = alarmIndex
-        print(presetAlarmIndex)
         performSegue(withIdentifier: "goToAddAlarmVC", sender: self)
     }
     
     func receiveData(data: [String: Int]) {
+        if data["delete"]! == 1 {
+            gameDelegate?.deleteAlarm()
+            return
+        }
+        
         var time = "12:00"
         var timeOfDay = 0
         var dayOfWeek = 0
         var row = 3
         
         if let timeLabelNode = timeNode as? SKLabelNode {
-        time = timeLabelNode.text!
+            time = timeLabelNode.text!
         }
         if let timeIndex = data["timOfDay"] {
-        timeOfDay = timeIndex
+            timeOfDay = timeIndex
         }
         if let dayIndex = data["dayOfWeek"] {
-        dayOfWeek = dayIndex
+            dayOfWeek = dayIndex
         }
         
         if let rowIndex = data["row"] {
-        row = rowIndex
+            row = rowIndex
         }
         
         addAlarm(timeStamp: time, timeOfDayIndex: timeOfDay, dayOfWeekIndex: dayOfWeek, rowSelection: row)
+        
+
     }
 }
