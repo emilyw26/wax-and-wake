@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "sunMoon.png",
+      "filename" : "day-and-night-1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "day-and-night.png",
       "scale" : "2x"
     },
     {

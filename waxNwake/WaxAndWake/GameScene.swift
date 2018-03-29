@@ -10,20 +10,30 @@ import GameplayKit
 import SpriteKit
 import UIKit
 
+protocol AlarmViewer {
+    func viewTouchedAlarm(alarmIndex: Int)
+}
+
 @objcMembers
-class GameScene: SKScene {
+class GameScene: SKScene, GameDelegate {
     
     let player = SKSpriteNode(imageNamed: "ball")
     let button = SKSpriteNode(imageNamed: "add")
+    let background = SKSpriteNode(imageNamed: "sunMoon")
+    var alarms = [SKSpriteNode]()
+    
     let timeLabel = SKLabelNode(text: "12:00")
     
     var touchingPlayer = false
+    var touchingAlarm = false
+    
     var radius = CGFloat(100)
     var scaleFactor = CGFloat(1.3)
     
+    var viewDelegate: AlarmViewer?
+    
     override func didMove(to view: SKView) {
         // this method is called when your game scene is ready to run
-        let background = SKSpriteNode(imageNamed: "sunMoon")
         background.size.width = frame.size.width/3
         background.size.height = background.size.width
         background.zPosition = -1
@@ -48,6 +58,7 @@ class GameScene: SKScene {
         timeLabel.zPosition = 3
         addChild(timeLabel)
     }
+    
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
@@ -57,6 +68,12 @@ class GameScene: SKScene {
             
             if tappedNodes.contains(player) {
                 touchingPlayer = true
+            } else {
+                for i in 0 ... alarms.count-1 {
+                    if tappedNodes.contains(alarms[i]) {
+                        viewDelegate?.viewTouchedAlarm(alarmIndex: i)
+                    }
+                }
             }
         }
     }
@@ -68,7 +85,6 @@ class GameScene: SKScene {
                 
                 let radians = atan2(location.y, location.x) + CGFloat.pi
                 let degrees = radians * (180 / CGFloat.pi) + 180
-                print(degrees)
                 
                 player.position.x = radius * cos(radians)
                 player.position.y = radius * sin(radians)
@@ -81,6 +97,7 @@ class GameScene: SKScene {
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         touchingPlayer = false
+        touchingAlarm = false
     }
     
 
@@ -99,6 +116,18 @@ class GameScene: SKScene {
         let minutes: Int = Int((decimalValue * 60).truncatingRemainder(dividingBy: 60))
     
         return "\(hours):\(minutes < 10 ? "0\(minutes)" : "\(minutes)")"
+    }
+    
+    func addAlarm() {
+        let alarm = SKSpriteNode(imageNamed: "ball")
+        alarm.size.width = background.size.height/10
+        alarm.size.height = background.size.height/10
+        alarm.zPosition = 2
+        alarm.position = player.position
+        addChild(alarm)
+        
+        player.position = CGPoint(x: frame.midX, y: background.size.height/2)
+        alarms.append(alarm)
     }
     
 }

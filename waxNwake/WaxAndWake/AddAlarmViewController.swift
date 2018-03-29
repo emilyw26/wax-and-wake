@@ -8,25 +8,45 @@
 
 import UIKit
 
+protocol CanReceive {
+    func receiveData(data: [String: Int])
+}
+
 class AddAlarmViewController: UIViewController {
     var timeValuePassedOver: String?
+
+    var timeSelection: Int?
+    var daySelection: Int?
+    
+    var delegete: CanReceive?
+    
     @IBOutlet weak var time: UILabel!
-    @IBOutlet weak var amPm: UISegmentedControl!
-    @IBOutlet weak var label: UITextField!
-    @IBOutlet weak var daysOfWeek: UISegmentedControl!
-    @IBOutlet weak var vibes: UISegmentedControl!
+    @IBOutlet weak var timeOfDay: UISegmentedControl!
+    @IBOutlet weak var dayOfWeek: UISegmentedControl!
+    @IBOutlet weak var addDeleteButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         time.text = timeValuePassedOver
         time.adjustsFontSizeToFitWidth = true
+
+        if timeSelection != nil && daySelection != nil {
+            print("SETTING UP EXISTING ALARM")
+            timeOfDay.selectedSegmentIndex = timeSelection!
+            dayOfWeek.selectedSegmentIndex = daySelection!
+            addDeleteButton.setTitle("Delete Alarm", for: .normal)
+        } else {
+            print("SETTING UP NEW ALARM")
+            addDeleteButton.setTitle("Add Alarm", for: .normal)
+        }
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     /*
     // MARK: - Navigation
@@ -37,5 +57,25 @@ class AddAlarmViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func addAlarmButtonPressed(_ sender: UIButton) {
+        if addDeleteButton.title(for: .normal)! == "Add Alarm" {
+            delegete?.receiveData(data: ["timeOfDay": timeOfDay.selectedSegmentIndex, "dayOfWeek" : dayOfWeek.selectedSegmentIndex, "delete": 0])
+        } else if addDeleteButton.title(for: .normal)! == "Delete Alarm" {
+            delegete?.receiveData(data: ["delete": 1])
+        }
 
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func cancelButtonPressed(_ sender: UIButton) {
+        wipePresets()
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func wipePresets() {
+        timeSelection = nil
+        daySelection = nil
+    }
+    
 }
