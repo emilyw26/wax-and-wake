@@ -18,11 +18,13 @@ class Alarm {
     var time: String
     var timeIndex: Int
     var dayIndex: Int
+    var rowIndex: Int
     
-    init(time: String, timeIndex: Int, dayIndex: Int) {
+    init(time: String, timeIndex: Int, dayIndex: Int, rowIndex: Int) {
         self.time = time
         self.timeIndex = timeIndex
         self.dayIndex = dayIndex
+        self.rowIndex = rowIndex
     }
 }
 
@@ -86,6 +88,7 @@ class GameViewController: UIViewController, CanReceive {
                 if presetAlarmIndex != nil {
                     destinationVC.daySelection = alarms[presetAlarmIndex!].dayIndex
                     destinationVC.timeSelection = alarms[presetAlarmIndex!].timeIndex
+                    destinationVC.rowSelection = alarms[presetAlarmIndex!].rowIndex
                 }
                 destinationVC.delegete = self
             } else {
@@ -94,8 +97,8 @@ class GameViewController: UIViewController, CanReceive {
         }
     }
     
-    func addAlarm(timeStamp: String, timeOfDayIndex: Int, dayOfWeekIndex: Int) {
-        alarms.append(Alarm(time: timeStamp, timeIndex: timeOfDayIndex, dayIndex: dayOfWeekIndex))
+    func addAlarm(timeStamp: String, timeOfDayIndex: Int, dayOfWeekIndex: Int, rowSelection: Int) {
+        alarms.append(Alarm(time: timeStamp, timeIndex: timeOfDayIndex, dayIndex: dayOfWeekIndex, rowIndex: rowSelection))
         gameDelegate?.addAlarm()
     }
     
@@ -109,6 +112,7 @@ class GameViewController: UIViewController, CanReceive {
         var time = "12:00"
         var timeOfDay = 0
         var dayOfWeek = 0
+        var row = 3
         
         if let timeLabelNode = timeNode as? SKLabelNode {
         time = timeLabelNode.text!
@@ -119,6 +123,11 @@ class GameViewController: UIViewController, CanReceive {
         if let dayIndex = data["dayOfWeek"] {
         dayOfWeek = dayIndex
         }
-        addAlarm(timeStamp: time, timeOfDayIndex: timeOfDay, dayOfWeekIndex: dayOfWeek)
+        
+        if let rowIndex = data["row"] {
+        row = rowIndex
+        }
+        
+        addAlarm(timeStamp: time, timeOfDayIndex: timeOfDay, dayOfWeekIndex: dayOfWeek, rowSelection: row)
     }
 }
