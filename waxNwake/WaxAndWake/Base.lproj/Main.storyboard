@@ -96,7 +96,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                                 <state key="normal" title="Add Alarm"/>
                                 <connections>
-                                    <action selector="addAlarmButtonPressed:" destination="Ow9-iB-EIY" eventType="touchUpInside" id="xfH-fk-hnh"/>
+                                    <action selector="addAlarmButtonPressed:" destination="Ow9-iB-EIY" eventType="touchUpInside" id="BSj-Lf-EHk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -104,6 +104,8 @@
                         <viewLayoutGuide key="safeArea" id="iw6-HN-ovv"/>
                     </view>
                     <connections>
+                        <outlet property="addDeleteButton" destination="2jA-Wp-mZq" id="iRi-Hq-XG5"/>
+                        <outlet property="cancelButton" destination="gw4-6E-2D3" id="1Jv-b8-RUI"/>
                         <outlet property="dayOfWeek" destination="3ln-aY-gg2" id="AKd-t7-JA2"/>
                         <outlet property="time" destination="bTf-nF-A7Z" id="q6c-Fp-L0u"/>
                         <outlet property="timeOfDay" destination="drL-Cj-aeV" id="Idd-Ag-spT"/>

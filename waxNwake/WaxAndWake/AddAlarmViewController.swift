@@ -14,15 +14,29 @@ protocol CanReceive {
 
 class AddAlarmViewController: UIViewController {
     var timeValuePassedOver: String?
+    var timeSelection: Int?
+    var daySelection: Int?
+    
     var delegete: CanReceive?
     
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var timeOfDay: UISegmentedControl!
     @IBOutlet weak var dayOfWeek: UISegmentedControl!
+    @IBOutlet weak var addDeleteButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         time.text = timeValuePassedOver
+        if timeSelection != nil && daySelection != nil {
+            print("SETTING UP EXISTING ALARM")
+            timeOfDay.selectedSegmentIndex = timeSelection!
+            dayOfWeek.selectedSegmentIndex = daySelection!
+            addDeleteButton.setTitle("Delete Alarm", for: .normal)
+        } else {
+            print("SETTING UP NEW ALARM")
+            addDeleteButton.setTitle("Add Alarm", for: .normal)
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -40,13 +54,25 @@ class AddAlarmViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
     @IBAction func addAlarmButtonPressed(_ sender: UIButton) {
-        delegete?.receiveData(data: ["timeOfDay": timeOfDay.selectedSegmentIndex, "dayOfWeek" : dayOfWeek.selectedSegmentIndex])
+        if addDeleteButton.title(for: .normal)! == "Add Alarm" {
+            delegete?.receiveData(data: ["timeOfDay": timeOfDay.selectedSegmentIndex, "dayOfWeek" : dayOfWeek.selectedSegmentIndex, "delete": 0])
+        } else if addDeleteButton.title(for: .normal)! == "Delete Alarm" {
+            delegete?.receiveData(data: ["delete": 1])
+        }
+
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
+        wipePresets()
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func wipePresets() {
+        timeSelection = nil
+        daySelection = nil
     }
     
 }

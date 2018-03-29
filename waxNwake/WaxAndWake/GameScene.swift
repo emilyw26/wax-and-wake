@@ -10,8 +10,13 @@ import GameplayKit
 import SpriteKit
 import UIKit
 
+protocol AlarmViewer {
+    func viewTouchedAlarm(alarmIndex: Int)
+}
+
 @objcMembers
 class GameScene: SKScene, GameDelegate {
+    
     let player = SKSpriteNode(imageNamed: "ball")
     let button = SKSpriteNode(imageNamed: "add")
     let background = SKSpriteNode(imageNamed: "sunMoon")
@@ -20,8 +25,12 @@ class GameScene: SKScene, GameDelegate {
     let timeLabel = SKLabelNode(text: "12:00")
     
     var touchingPlayer = false
+    var touchingAlarm = false
+    
     var radius = CGFloat(100)
     var scaleFactor = CGFloat(1.3)
+    
+    var viewDelegate: AlarmViewer?
     
     override func didMove(to view: SKView) {
         // this method is called when your game scene is ready to run
@@ -49,6 +58,7 @@ class GameScene: SKScene, GameDelegate {
         timeLabel.zPosition = 3
         addChild(timeLabel)
     }
+    
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
@@ -58,6 +68,12 @@ class GameScene: SKScene, GameDelegate {
             
             if tappedNodes.contains(player) {
                 touchingPlayer = true
+            } else {
+                for i in 0 ... alarms.count-1 {
+                    if tappedNodes.contains(alarms[i]) {
+                        viewDelegate?.viewTouchedAlarm(alarmIndex: i)
+                    }
+                }
             }
         }
     }
@@ -81,6 +97,7 @@ class GameScene: SKScene, GameDelegate {
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         touchingPlayer = false
+        touchingAlarm = false
     }
     
 

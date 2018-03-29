@@ -26,10 +26,14 @@ class Alarm {
     }
 }
 
-class GameViewController: UIViewController, CanReceive {
+class GameViewController: UIViewController, CanReceive, AlarmViewer {
+    
     var timeNode: SKNode?
+    var alarmNodes: SKNode?
     var gameDelegate: GameDelegate?
     var alarms = [Alarm]()
+    
+    var presetAlarmIndex: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +43,6 @@ class GameViewController: UIViewController, CanReceive {
             if let scene = SKScene(fileNamed: "GameScene") {
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
-                
                 // set up delegate
                 gameDelegate = scene as? GameDelegate
                 
@@ -70,6 +73,7 @@ class GameViewController: UIViewController, CanReceive {
     }
     
     @IBAction func addAlarm(_ sender: Any) {
+        presetAlarmIndex = nil
         performSegue(withIdentifier: "goToAddAlarmVC", sender: self)
     }
     
@@ -78,6 +82,10 @@ class GameViewController: UIViewController, CanReceive {
             let destinationVC = segue.destination as! AddAlarmViewController
             if let timeLabelNode = timeNode as? SKLabelNode {
                 destinationVC.timeValuePassedOver = timeLabelNode.text!
+                if presetAlarmIndex != nil {
+                    destinationVC.daySelection = alarms[presetAlarmIndex!].dayIndex
+                    destinationVC.timeSelection = alarms[presetAlarmIndex!].timeIndex
+                }
                 destinationVC.delegete = self
             } else {
                 destinationVC.timeValuePassedOver = "Unsuccessful"
@@ -88,7 +96,12 @@ class GameViewController: UIViewController, CanReceive {
     func addAlarm(timeStamp: String, timeOfDayIndex: Int, dayOfWeekIndex: Int) {
         alarms.append(Alarm(time: timeStamp, timeIndex: timeOfDayIndex, dayIndex: dayOfWeekIndex))
         gameDelegate?.addAlarm()
-        print(String(describing: alarms))
+    }
+    
+    func viewTouchedAlarm(alarmIndex: Int) {
+        presetAlarmIndex = alarmIndex
+        print(presetAlarmIndex)
+        performSegue(withIdentifier: "goToAddAlarmVC", sender: self)
     }
     
     func receiveData(data: [String: Int]) {
@@ -106,6 +119,5 @@ class GameViewController: UIViewController, CanReceive {
         dayOfWeek = dayIndex
         }
         addAlarm(timeStamp: time, timeOfDayIndex: timeOfDay, dayOfWeekIndex: dayOfWeek)
-        
     }
 }
