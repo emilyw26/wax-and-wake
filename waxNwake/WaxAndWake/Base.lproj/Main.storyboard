@@ -91,10 +91,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jA-Wp-mZq">
-                                <rect key="frame" x="129" y="385" width="157" height="48"/>
+                                <rect key="frame" x="82" y="381" width="246" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
-                                <state key="normal" title="Add Alarm"/>
+                                <state key="normal" title="Delete Alarm"/>
                                 <connections>
                                     <action selector="addAlarmButtonPressed:" destination="Ow9-iB-EIY" eventType="touchUpInside" id="BSj-Lf-EHk"/>
                                 </connections>

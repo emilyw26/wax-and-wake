@@ -26,7 +26,7 @@ class Alarm {
     }
 }
 
-class GameViewController: UIViewController, CanReceive, AlarmViewer {
+class GameViewController: UIViewController, CanReceive {
     
     var timeNode: SKNode?
     var alarmNodes: SKNode?
@@ -40,11 +40,12 @@ class GameViewController: UIViewController, CanReceive, AlarmViewer {
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
+            if let scene = GameScene(fileNamed: "GameScene") {
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
                 // set up delegate
                 gameDelegate = scene as? GameDelegate
+                scene.viewController = self
                 
                 // Present the scene
                 view.presentScene(scene)

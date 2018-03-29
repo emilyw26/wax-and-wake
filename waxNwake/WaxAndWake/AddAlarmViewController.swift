@@ -32,15 +32,22 @@ class AddAlarmViewController: UIViewController {
         time.adjustsFontSizeToFitWidth = true
 
         if timeSelection != nil && daySelection != nil {
-            print("SETTING UP EXISTING ALARM")
-            timeOfDay.selectedSegmentIndex = timeSelection!
-            dayOfWeek.selectedSegmentIndex = daySelection!
+            configureSetAlarmView(selector: timeOfDay, selectionIndex: timeSelection!)
+            configureSetAlarmView(selector: dayOfWeek, selectionIndex: daySelection!)
+            
             addDeleteButton.setTitle("Delete Alarm", for: .normal)
         } else {
-            print("SETTING UP NEW ALARM")
             addDeleteButton.setTitle("Add Alarm", for: .normal)
         }
         // Do any additional setup after loading the view.
+    }
+    
+    func configureSetAlarmView(selector: UISegmentedControl, selectionIndex: Int) {
+        for i in 0 ... selector.numberOfSegments-1 {
+            selector.setEnabled(false, forSegmentAt: i)
+        }
+        selector.setEnabled(true, forSegmentAt: selectionIndex)
+        selector.selectedSegmentIndex = selectionIndex
     }
 
     override func didReceiveMemoryWarning() {

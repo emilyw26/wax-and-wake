@@ -10,12 +10,9 @@ import GameplayKit
 import SpriteKit
 import UIKit
 
-protocol AlarmViewer {
-    func viewTouchedAlarm(alarmIndex: Int)
-}
-
 @objcMembers
 class GameScene: SKScene, GameDelegate {
+    weak var viewController: GameViewController!
     
     let player = SKSpriteNode(imageNamed: "ball")
     let button = SKSpriteNode(imageNamed: "add")
@@ -29,8 +26,6 @@ class GameScene: SKScene, GameDelegate {
     
     var radius = CGFloat(100)
     var scaleFactor = CGFloat(1.3)
-    
-    var viewDelegate: AlarmViewer?
     
     override func didMove(to view: SKView) {
         // this method is called when your game scene is ready to run
@@ -71,7 +66,7 @@ class GameScene: SKScene, GameDelegate {
             } else {
                 for i in 0 ... alarms.count-1 {
                     if tappedNodes.contains(alarms[i]) {
-                        viewDelegate?.viewTouchedAlarm(alarmIndex: i)
+                        viewController.viewTouchedAlarm(alarmIndex: i)
                     }
                 }
             }
@@ -84,12 +79,11 @@ class GameScene: SKScene, GameDelegate {
                 let location = touch.location(in: self)
                 
                 let radians = atan2(location.y, location.x) + CGFloat.pi
-                let degrees = radians * (180 / CGFloat.pi) + 180
                 
                 player.position.x = radius * cos(radians)
                 player.position.y = radius * sin(radians)
                 
-                let time: String = convertAngleToTime(angle: degrees)
+                let time: String = convertAngleToTime(angle: radians*(180 / CGFloat.pi) + 180)
                 timeLabel.text = time
             }
         }
@@ -128,6 +122,10 @@ class GameScene: SKScene, GameDelegate {
         
         player.position = CGPoint(x: frame.midX, y: background.size.height/2)
         alarms.append(alarm)
+    }
+    
+    func setController(controller: GameViewController!) {
+        viewController = controller
     }
     
 }
